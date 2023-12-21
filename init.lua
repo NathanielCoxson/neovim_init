@@ -1,0 +1,2 @@
+require("nate")
+print("hello")
