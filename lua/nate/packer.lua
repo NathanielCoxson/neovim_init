@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
   })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use('windwp/nvim-ts-autotag')
   use('nvim-treesitter/playground')
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
