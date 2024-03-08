@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
   }
 
   -- auto close brackets
-  use 'm4xshen/autoclose.nvim'
+  -- use 'm4xshen/autoclose.nvim'
 
   -- tab out of brackets
   use {
@@ -55,6 +55,13 @@ return require('packer').startup(function(use)
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('windwp/nvim-ts-autotag')
+  use {
+      "windwp/nvim-autopairs",
+      event = "InsertEnter",
+      config = function()
+          require("nvim-autopairs").setup {}
+      end
+  }
   use('nvim-treesitter/playground')
   use('ThePrimeagen/harpoon')
   use('mbbill/undotree')
